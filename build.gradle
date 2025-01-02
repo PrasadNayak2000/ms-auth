@@ -41,15 +41,11 @@ dependencies {
     /* implementation group: 'org.flywaydb', name: 'flyway-mysql', version: '11.0.1'
      implementation group: 'org.flywaydb', name: 'flyway-core', version: '11.0.1'*/
 
-    //implementation group: 'org.springframework.boot', name: 'spring-boot-starter-oauth2-client', version: '3.4.0'
-    //implementation group: 'org.keycloak', name: 'keycloak-spring-boot-starter', version: '20.0.4'
-    implementation group: 'org.keycloak', name: 'keycloak-admin-client', version: '26.0.3'
-    //implementation group: 'org.springframework.security', name: 'spring-security-oauth2-resource-server', version: '6.4.2'
-    //implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '4.2.0'
     implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
 
+    implementation group: 'org.keycloak', name: 'keycloak-admin-client', version: '26.0.3'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
 
 }
 
