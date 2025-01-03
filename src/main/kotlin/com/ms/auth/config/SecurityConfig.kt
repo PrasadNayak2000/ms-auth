@@ -18,10 +18,7 @@ class SecurityConfig {
         http
             .authorizeHttpRequests { auth ->
                 auth.requestMatchers(
-                    "/api/v1/auth/login",
-                    "/api/v1/auth/new-token",
-                    "/api/v1/auth/authorization-code",
-                    "/api/v1/auth/access-token"
+                    *openEndpoints.toTypedArray()
                 ).permitAll()
                 auth.anyRequest().authenticated()
             }
@@ -31,5 +28,11 @@ class SecurityConfig {
         http.csrf { it.disable() }
         return http.build()
     }
-    
+
+    private var openEndpoints = listOf(
+        "/api/v1/auth/login",
+        "/api/v1/auth/new-token",
+        "/api/v1/auth/authorization-code",
+        "/api/v1/auth/access-token"
+    )
 }
