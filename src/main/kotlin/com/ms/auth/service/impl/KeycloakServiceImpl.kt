@@ -23,7 +23,7 @@ class KeycloakServiceImpl(private val keycloakFeignClient: KeycloakClient) : Key
     override fun userLogin(request: UserAuthRequest): AccessTokenResponse? {
         val loginKeycloak = KeycloakBuilder.builder()
             .realm(keycloakConstant.realm)
-            .serverUrl("http://localhost:8080/")
+            .serverUrl(keycloakConstant.serverUrl)
             .clientId(keycloakConstant.clientId)
             .clientSecret(keycloakConstant.clientSecret)
             .username(request.getUsername())

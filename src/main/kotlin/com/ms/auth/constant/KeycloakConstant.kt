@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component
 @Component
 class KeycloakConstant {
 
-    @Value("\${spring.security.oauth2.client.provider.keycloak.issuer-uri}")
-    lateinit var issuerUrl: String
+    @Value("\${spring.security.oauth2.client.provider.keycloak.server-uri}")
+    lateinit var serverUrl: String
 
     @Value("\${spring.security.oauth2.client.provider.keycloak.authorization-uri}")
     lateinit var authorizationUrl: String
@@ -27,6 +27,8 @@ class KeycloakConstant {
     @Value("\${auth.logout-redirect-uri}")
     lateinit var logoutRedirectionUrl: String
 
+    @Value("\${spring.security.oauth2.resourceserver.jwt.jwk-set-uri}")
+    lateinit var tokenValidationUrl: String
 
     val grantTypeKey = "grant_type"
     val clientIdKey = "client_id"
